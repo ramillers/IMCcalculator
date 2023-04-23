@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&family=Montserrat:ital,wght@1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="./modal.js" defer></script> <!--defer serve para dizer pra esperar e só rodar o js dps q terminar o html-->
+    <script src="./js/script.js" defer type="module"></script> 
+</head>
+<body>
+
+    <div class="alert-error">
+        Digite somente números
+    </div>
+
+    <div class="container">
+        <main class="card">
+            <form action="">
+                <h1 class="title">Cálculo de IMC</h1>
+                <div class="input-wrapper">
+                    <label for="weight">Peso (kg)</label> <!-- ao clicar em peso ele seleciona o input justamente por causa do "for"-->
+                    <input 
+                        id="weight" 
+                        type="text"
+                    placeholder="60">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="height">Altura (cm)</label>
+                    <input 
+                        id="height" 
+                        type="text"
+                        placeholder="165"> <!-- os números de exemplo dentro do formulário --> 
+                </div>
+
+                <button type="submit">Calcular IMC</button>
+            </form>
+        </main>
+    </div>
+
+    <div class="modal-wrapper">
+        <div class="modal card">
+            <h2 class="title">
+                    
+                <button class="close">
+                    <img src="./marca-x.png" alt="imagem para fechar o popup" class="close-img">
+                </button>
+                <span>seu IMC é de 28</span>
+            </h2>
+        </div>
+    </div>
+    
+</body>
+</html>
+
